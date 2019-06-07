@@ -39,7 +39,7 @@ export default class Login extends Component {
                         className="form-login"
                         onSubmit={this.login}>
                         <div className="img-container">
-                            <img src="/assets/lambda.png" />
+                            <img src="/assets/lambda.png" alt="lambda logo" />
                         </div>
                         <div className="field">
                             <input
