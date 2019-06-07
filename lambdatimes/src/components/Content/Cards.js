@@ -1,12 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import uuid from 'uuid';
+import { CardsContainerDiv } from '../Styles/CardsStyles';
 import Card from './Card';
 
-const Cards = props => {
+const Cards = ({ cards }) => {
   return (
-    <div className="cards-container">
+    <CardsContainerDiv>
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
-    </div>
+      {
+        cards.map(card =>
+          <Card
+            key={uuid()}
+            card={card}
+          />
+        )
+      }
+    </CardsContainerDiv>
   )
 }
 

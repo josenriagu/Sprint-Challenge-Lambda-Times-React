@@ -1,16 +1,17 @@
 import React from 'react';
+import { CardDiv, HeadlineDiv, AuthorDiv, ImgContainerDiv, CardImage, CardSpan } from '../Styles/CardStyles';
 
-const Card = props => {
+const Card = ({ card }) => {
   return (
-    <div className="card">
-      <div className="headline">{/* headline goes here */}</div>
-      <div className="author">
-        <div className="img-container">
-          <img src={'' /* image source goes here */} />
-        </div>
-        <span>By {/* author goes here */}</span>
-      </div>
-    </div>
+    <CardDiv>
+      <HeadlineDiv>{card.headline}</HeadlineDiv>
+      <AuthorDiv>
+        <ImgContainerDiv>
+          <CardImage src={card.img} />
+        </ImgContainerDiv>
+        <CardSpan>By {card.author}</CardSpan>
+      </AuthorDiv>
+    </CardDiv>
   );
 };
 
