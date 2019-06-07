@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import { CardDiv, HeadlineDiv, AuthorDiv, ImgContainerDiv, CardImage, CardSpan } from '../Styles/CardStyles';
 
 const Card = ({ card }) => {
@@ -15,6 +16,9 @@ const Card = ({ card }) => {
   );
 };
 
-// Make sure to include PropTypes.
+// Make sure to include propTypes.
+Card.propTypes = {
+  card: propTypes.object
+}
 
 export default Card;

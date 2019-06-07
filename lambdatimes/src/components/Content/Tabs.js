@@ -1,8 +1,9 @@
 import React from 'react';
 import uuid from 'uuid';
+import propTypes from 'prop-types';
 import { TabsDiv, TopicsDiv, TitleSpan } from '../Styles/TabsStyles';
 import Tab from './Tab';
-const Tabs = ({ selectedTab, selectTabHandler, tabs }) => {
+const Tabs = ({ tabs, selectedTab, selectTabHandler }) => {
   return (
     <TabsDiv>
       <TopicsDiv>
@@ -25,4 +26,9 @@ const Tabs = ({ selectedTab, selectTabHandler, tabs }) => {
 };
 
 // Make sure to use PropTypes to validate your types!
+Tabs.propTypes = {
+  tabs: propTypes.array,
+  selectedTab: propTypes.string,
+  selectTabHandler: propTypes.func
+}
 export default Tabs;

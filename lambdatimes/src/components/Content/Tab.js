@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import { TabDiv } from '../Styles/TabStyles';
 
 const Tab = ({ tab, selectedTab, selectTabHandler }) => {
@@ -21,5 +22,9 @@ const Tab = ({ tab, selectedTab, selectTabHandler }) => {
 };
 
 // Make sure you include PropTypes on your props.
-
+Tab.propTypes = {
+  tabs: propTypes.string,
+  selectedTab: propTypes.string,
+  selectTabHandler: propTypes.func
+}
 export default Tab;

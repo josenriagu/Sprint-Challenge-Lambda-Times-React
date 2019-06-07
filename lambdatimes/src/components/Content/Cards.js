@@ -1,5 +1,6 @@
 import React from 'react';
 import uuid from 'uuid';
+import propTypes from 'prop-types';
 import { CardsContainerDiv } from '../Styles/CardsStyles';
 import Card from './Card';
 
@@ -21,5 +22,8 @@ const Cards = ({ cards }) => {
 }
 
 // Make sure you include prop types for all of your incoming props
+Cards.propTypes = {
+  cards: propTypes.array
+}
 
 export default Cards;
